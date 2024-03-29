@@ -1,4 +1,7 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
+import { Platform } from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -12,6 +15,14 @@ import OnKisim3 from './src/OnKisim3';
 const Stack = createStackNavigator();
 
 function App() {
+   useEffect(() => {
+    if (Platform.OS === "android") {
+      // SplashScreen.hide() çağrıldıktan 3 saniye sonra açılış ekranını gizle
+      setTimeout(() => {
+        SplashScreen.hide();
+      }, 3000); // 3000 milisaniye (3 saniye)
+    }
+  }, []);
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="OnKisim1" screenOptions={{ headerShown: false }}>

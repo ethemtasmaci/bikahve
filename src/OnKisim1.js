@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Image, Text, TouchableOpacity } from 'react-native';
+import { View, Image, Text, TouchableOpacity, StatusBar } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 const OnKisim1 = ({ navigation }) => (
   <View style={{ flex: 1 }}>
+    <StatusBar backgroundColor="transparent" translucent={true} />
     <Image source={require('../img/onkisim1.png')} style={{ position: 'absolute', top: 0, left: 0, bottom: 0, right: 0, resizeMode: 'cover' }} />
     <LinearGradient
       colors={['rgba(0,0,0,0.1)', 'rgba(0,0,0,1)']}
@@ -47,8 +48,7 @@ const OnKisim1 = ({ navigation }) => (
       <View style={{
         width: 120,
         height: 4,
-        // marginTop: 63,
-        marginTop: 33,
+        marginTop: 63,
         borderRadius: 50,
         backgroundColor: '#A1541E',
       }} />
@@ -56,8 +56,7 @@ const OnKisim1 = ({ navigation }) => (
       <View style={{
         width: 120,
         height: 4,
-        // marginTop: 63,
-        marginTop: 33,
+        marginTop: 63,
         marginLeft: 11,
         borderRadius: 50,
         backgroundColor: '#978D86',
@@ -66,8 +65,7 @@ const OnKisim1 = ({ navigation }) => (
       <View style={{
         width: 120,
         height: 4,
-        // marginTop: 63,
-        marginTop: 33,
+        marginTop: 63,
         marginLeft: 11,
         borderRadius: 50,
         backgroundColor: '#978D86',
@@ -80,8 +78,7 @@ const OnKisim1 = ({ navigation }) => (
         height: 60,
         backgroundColor: '#582E11',
         borderRadius: 35,
-        // marginTop: 58
-        marginTop: 38
+        marginTop: 58
       }}>
         <TouchableOpacity onPress={() => navigation.navigate('OnKisim2')}>
           <Text style={{
