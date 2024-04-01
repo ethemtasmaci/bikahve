@@ -1,7 +1,13 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 
 const Yonlendir = () => {
+    const navigation = useNavigation();
+
+    const onPressMenu = () => {
+        navigation.navigate('GirisYap');
+    };
     return (
         <>
             <View style={{
@@ -19,12 +25,20 @@ const Yonlendir = () => {
                     color: '#B5B5B5',
                     width: '89%',
                     height: 67,
-                    marginTop: 6,
+                    marginTop: 4,
                     marginLeft: 15,
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
-                    Uygulamayı tüm özellikleri ile kullanabilmek için lütfen <Text style={{ fontWeight: '800' }}>kayıt olun</Text > veya <Text style={{ fontWeight: '800' }}>giriş yapınız</Text>.
+                    Uygulamayı tüm özellikleri ile kullanabilmek için lütfen
+                    <TouchableOpacity onPress={onPressMenu}>
+                        <Text style={{ fontWeight: '800', color: '#B5B5B5', }}> kayıt olun </Text>
+                    </TouchableOpacity>
+                    veya
+                    <TouchableOpacity onPress={onPressMenu}>
+                        <Text style={{ fontWeight: '800', color: '#B5B5B5', }}> giriş yapınız</Text>
+                    </TouchableOpacity>
+                    .
                 </Text>
             </View>
         </>

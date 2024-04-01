@@ -19,7 +19,6 @@ const BulunduguMekan = () => {
                         color: '#B5B5B5',
                         fontFamily: 'Poppins',
                         fontSize: 14,
-                        fontWeight: 'Regular',
                     }}>
                         Bulunduğunuz Mekan
                     </Text>
@@ -27,7 +26,6 @@ const BulunduguMekan = () => {
                         color: '#AD681F',
                         fontFamily: 'Poppins',
                         fontSize: 14,
-                        fontWeight: 'Regular',
                     }}>
                         Moc Coffee Meram
                     </Text>

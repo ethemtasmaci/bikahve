@@ -12,7 +12,7 @@ const OnKisim2 = ({ navigation }) => (
     />
 
     <View style={{
-      marginTop: 551
+      marginTop: '134%'
     }}>
       <Text style={{
         color: '#fff',

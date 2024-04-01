@@ -12,14 +12,14 @@ const OnKisim1 = ({ navigation }) => (
     />
 
     <View style={{
-      marginTop: 551
+      marginTop: '134%'
     }}>
       <Text style={{
         color: '#fff',
         fontSize: 27,
         fontFamily: 'Poppins',
         fontWeight: '800',
-        width: '60%',
+        width: '70%',
         left: 24
       }}>
         Kahve'nin büyüsünü
