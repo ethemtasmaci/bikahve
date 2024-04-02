@@ -10,6 +10,7 @@ import HosGelin from '../components/HosGelin';
 
 
 const AnasayfaG = () => {
+ 
   return (
     <>
       <View style={{

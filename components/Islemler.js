@@ -1,4 +1,5 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 
 import KahveSvg from '../svg/KahveSvg';
@@ -9,6 +10,11 @@ import MekanSvg from '../svg/MekanSvg';
 import MarketSvg from '../svg/MarketSvg';
 
 const Islemler = () => {
+    const navigation = useNavigation();
+
+    const handleMenuPress = (screenName) => {
+        navigation.navigate(screenName); // İlgili sayfaya yönlendir
+    };
     return (
         <>
             <View style={{
@@ -35,25 +41,28 @@ const Islemler = () => {
                 marginLeft: 'auto',
                 marginRight: 'auto',
             }}>
-                <View style={{
-                    height: 120,
-                    width: 120,
-                    backgroundColor: '#2A2A2A',
-                    borderRadius: 10,
-                    marginRight: 11,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}>
-                    <QRMenu height={41} width={41} />
-                    <Text style={{
-                        color: '#fff',
-                        fontFamily: 'Poppins',
-                        fontSize: 19,
-                        marginTop: 6,
+
+                <TouchableOpacity onPress={() => handleMenuPress('QROkuyucu')}>
+                    <View style={{
+                        height: 120,
+                        width: 120,
+                        backgroundColor: '#2A2A2A',
+                        borderRadius: 10,
+                        marginRight: 11,
+                        justifyContent: 'center',
+                        alignItems: 'center',
                     }}>
-                        bi<Text style={{ color: '#AD681F' }}>menü</Text>
-                    </Text>
-                </View>
+                        <QRMenu height={41} width={41} />
+                        <Text style={{
+                            color: '#fff',
+                            fontFamily: 'Poppins',
+                            fontSize: 19,
+                            marginTop: 6,
+                        }}>
+                            bi<Text style={{ color: '#AD681F' }}>menü</Text>
+                        </Text>
+                    </View>
+                </TouchableOpacity>
 
                 <View style={{
                     height: 120,

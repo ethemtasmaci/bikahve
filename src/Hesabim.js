@@ -64,9 +64,12 @@ const Hesabim = () => {
                                     height: 60,
                                     borderRadius: 30,
                                     marginRight: 'auto',
+                                    borderColor: '#707070',
+                                    borderWidth: 2,
+
                                 }}
                                 source={require("../img/profilfotografi.png")} />
-                            <View>
+                            <View style={{ left: -20 }}>
                                 <Text style={{ color: '#fff', fontSize: 18, fontFamily: 'Poppins', marginRight: 'auto', top: 10, left: -22 }}>Ahmet <Text style={{ color: '#7D573E' }} > Gökhan </Text></Text>
                                 <Text style={{
                                     color: '#fff',
@@ -76,22 +79,24 @@ const Hesabim = () => {
                                     marginTop: 5
                                 }}>Konya</Text>
                             </View>
-                            <OnaySvg height={17} width={17} style={{ marginRight: 'auto', left: -15, top: 15 }} />
+                            <OnaySvg height={17} width={17} style={{ marginRight: 'auto', left: -35, top: 15 }} />
 
-                            <Text style={{
-                                color: '#fff',
-                                width: 85,
-                                height: 31,
-                                borderRadius: 20,
-                                backgroundColor: '#7D573E',
-                                textAlign: 'center',
-                                paddingTop: 6,
-                                marginTop: 18,
-                                right: 50,
-                                marginLeft: 'auto',
-                            }}>
-                                Çıkış Yap
-                            </Text>
+                            <TouchableOpacity onPress={() => handleMenuPress('AnasayfaK')}>
+                                <Text style={{
+                                    color: '#fff',
+                                    width: 85,
+                                    height: 31,
+                                    borderRadius: 20,
+                                    backgroundColor: '#7D573E',
+                                    textAlign: 'center',
+                                    paddingTop: 6,
+                                    marginTop: 18,
+                                    right: 50,
+                                    marginLeft: 'auto',
+                                }}>
+                                    Çıkış Yap
+                                </Text>
+                            </TouchableOpacity>
                         </View>
 
                     </View>

@@ -12,15 +12,15 @@ const HosGelin = () => {
     return (
         <>
             <View style={{
-                width: '90%',
+                width: '95%',
                 flexDirection: 'row',
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                left: -8
             }}>
                 <View style={{
-                    width: '60%',
+                    width: '65%',
                     height: 67,
+                    right: 5,
                     backgroundColor: '#2A2A2A',
                     borderLeftColor: '#AD681F',
                     borderLeftWidth: 10,
@@ -33,7 +33,7 @@ const HosGelin = () => {
                         color: '#fff',
                         fontSize: 19,
                         fontFamily: 'Poppins',
-                        width: '70%',
+                        width: '65%',
                         left: 15,
                         top: 8,
                     }}>
@@ -42,8 +42,9 @@ const HosGelin = () => {
                 </View>
                 <TouchableOpacity
                     style={{
-                        width: '30%',
+                        width: '35%',
                         height: 67,
+                        left: 5,
                         backgroundColor: '#2A2A2A',
                         borderLeftColor: '#B5B5B5',
                         borderLeftWidth: 10,

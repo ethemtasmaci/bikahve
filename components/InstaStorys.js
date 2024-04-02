@@ -53,6 +53,8 @@ const InstaStorys = () => {
             width: '92%',
             marginLeft: 'auto',
             marginRight: 'auto',
+            paddingTop: 10,
+            paddingBottom: 10,
             borderBottomColor: '#2A2A2A',
             borderBottomWidth: 1,
             marginBottom: 10
