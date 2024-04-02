@@ -84,11 +84,17 @@ const QROkuyucu = () => {
                     <RNCamera
                         onBarCodeRead={({ data }) => {
                             console.log('QR Kod: ', data);
+                            if (data === 'AnasayfaG') {
+                                navigation.navigate(data); // QR kod içeriği 'AnasayfaG' ise, bu sayfaya yönlendirir
+                            } else {
+                                navigation.navigate('HataSayfasi'); // Aksi halde hata sayfasına yönlendirir
+                            }
                         }}
                         style={{
-                            width: '75%', height: '79%', borderRadius: 20, marginLeft: 'auto', marginRight: 'auto', marginTop: 20
+                            width: '75%', height: '78%', borderRadius: 20, marginLeft: 'auto', marginRight: 'auto', marginTop: 20
                         }}
                     />
+
 
                 </View>
 
